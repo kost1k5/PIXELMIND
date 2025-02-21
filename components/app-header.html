@@ -2,11 +2,29 @@
   header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 32px 160px 0;
+    font-weight: 600;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+  }
 
-    margin: auto;
+  .sign-in {
+    color: var(--color-white);
+    padding: 15px 52px;
+    background: var(--gradient-primary);
+    border-radius: 16px;
+  }
+  .sign-in:hover {
+    background: white;
+    color: var(--color-purple);
   }
 </style>
 <header>
-  <img src="./assets/logo.png" alt=" logo Pixelmind" />
-  <a href="#">Sign in</a>
+  <a href="/"><img src="./assets/logo.png" alt=" logo Pixelmind" /></a>
+  <a href="/" class="sign-in">Sign in</a>
 </header>

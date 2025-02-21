@@ -56,7 +56,7 @@ ComponentFactory.createComponent({
 });
 
 ComponentFactory.createComponent({
-    tagName: 'test',
-    htmlFile: 'components/test.html',
+    tagName: 'app-main',
+    htmlFile: 'components/app-main.html',
     useShadow: true
 });
