@@ -1,0 +1,17 @@
+:root {
+  --gradient-primary: linear-gradient(
+    to bottom,
+    #ba03ff 0%,
+    #6d4bff 67%,
+    #476bff 100%
+  );
+  --color-white: #ffffff;
+  --color-pink: #ff88ba;
+  --color-green: #00b87b;
+  --color-error: #f02929;
+  --color-gray-13: #090818;
+  --color-gray-8: #2a1f3e;
+  --color-gray-11: #141324;
+  --color-purple: #9921ff;
+  --color-blue: #4e42f1;
+}
