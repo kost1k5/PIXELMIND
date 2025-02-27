@@ -1,9 +1,11 @@
 body {
-  background-color: var(--color-gray-13);
+  background-color: var(--color-gray-13); /* Restored background color */
   font-family: Poppins, sans-serif;
   height: 100vh;
   margin: 0;
 }
+
+/* Main Container */
 .main-container {
   display: flex;
   flex-direction: column;
@@ -13,18 +15,25 @@ body {
   padding: 24px 0;
   color: aliceblue;
 }
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
 }
+
 ul li {
   display: inline-block;
   padding: 0 32px;
 }
+
 a {
   color: var(--color-white);
+  max-width: 300px;
 }
+
+/* Discord Button */
 .discord {
   background: var(--gradient-discord);
   color: white;
@@ -37,4 +46,163 @@ a {
   gap: 9px;
   justify-content: center;
   align-items: center;
+}
+
+.discord svg path {
+  transition: all ease 0.3s;
+}
+
+.discord:hover svg path {
+  fill: var(--color-blue);
+}
+
+.discord:hover {
+  background: var(--color-white);
+  color: var(--color-blue);
+  transition: all ease 0.3s;
+}
+
+/* What is Pixelmind Section */
+.what-is-pixelmind {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.what-is-pixelmind-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.what-is-pixelmind h1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 80px;
+}
+
+.what-is-pixelmind p {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 24px;
+}
+
+.center-radial-gradient {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #c44d9c 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(30px);
+  width: 30vw;
+  height: 30vh;
+  border-radius: 9999px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.what-is-pixelmind .btn-primary {
+  margin-top: 14px;
+}
+
+/* Select Styles */
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px; /* Select width */
+}
+
+/* Hide default select arrow */
+.select-wrapper select {
+  -webkit-appearance: none; /* Remove arrow in WebKit browsers */
+  -moz-appearance: none; /* Remove arrow in Firefox */
+  appearance: none; /* Remove arrow */
+  width: 100%;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 3);
+  color: rgba(255, 255, 255, 0.5); /* Default text color */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  padding: 16px;
+}
+
+/* Add custom arrow */
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Distance from right edge */
+  transform: translateY(-50%) rotate(0deg); /* Initial arrow position */
+  width: 12px;
+  height: 12px;
+  background: url("./assets/Arrow.svg") no-repeat center;
+  pointer-events: none; /* Prevent interfering with select clicks */
+}
+
+/* Arrow rotation animation */
+.select-wrapper.open .arrow {
+  transform: translateY(-50%) rotate(180deg); /* Rotation on open */
+}
+textarea {
+  font-family: Poppins, sans-serif;
+  background-color: #060611;
+  border-radius: 20px;
+  width: 544px;
+  height: 112px;
+  resize: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 24px;
+}
+.create-pixelmind {
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  p {
+    color: #a6a6a6;
+  }
+}
+.create-pixelmind-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .style {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+}
+.create-pixelmind-main {
+  display: flex;
+  gap: 26px;
+}
+.create-pixelmind-right {
+  display: flex;
+  flex-direction: column;
+  border: dashed 2px #312f4b;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  flex: 550px;
+  border-radius: 32px;
+}
+#customButton {
+  background: linear-gradient(to right, #ba03ff, #476bff);
+
+  text-transform: uppercase;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+  outline: none;
+}
+.create-pixelmind {
+  .btn-primary {
+    margin-top: 40px;
+  }
 }
