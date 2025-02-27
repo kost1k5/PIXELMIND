@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  color: var(--color-white);
+  padding: 16px;
+  background: var(--gradient-primary);
+  border-radius: 16px;
+  min-width: 160px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  border: none;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background: white;
+  color: var(--color-purple);
+}
+
+a {
+  text-decoration: none;
+}

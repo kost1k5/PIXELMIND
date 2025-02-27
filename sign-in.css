@@ -1,0 +1,155 @@
+body {
+  background-color: var(--color-gray-13);
+  background-image: url("./assets/retrowave.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: Poppins, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 1120px;
+  margin: auto;
+  height: 100vh;
+  padding: 24px 0;
+}
+
+.center-radial-gradient {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #c44d9c 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(30px);
+  width: 100vw;
+  height: 80vh;
+  border-radius: 9999px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  height: 48px;
+  width: 100%;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--color-white);
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 100%;
+  flex: 1;
+}
+
+h5 {
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+p {
+  color: var(--color-white);
+}
+
+.btn-primary {
+  margin-top: 10px;
+  color: var(--color-white);
+  padding: 15px 52px;
+  background: var(--gradient-primary);
+  border-radius: 16px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: 300px;
+}
+
+.btn-primary:hover {
+  background: white;
+  color: var(--color-purple);
+}
+
+.forgot-password {
+  color: var(--color-pink);
+  position: absolute;
+  right: 37%;
+  bottom: 39%;
+  font-size: 14px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  width: 300px;
+  padding: 15px 10px 15px 40px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: aliceblue;
+  outline: none;
+}
+
+.input-container img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+p a {
+  color: var(--color-pink);
+}
+
+/* .input-container input.error {
+  border-color: red; 
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none; 
+}
+
+.error-message.active {
+  display: block; }s
+
+
+#login-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+#login-button:not(:disabled) {
+  background-color: var(--color-pink);
+  cursor: pointer;
+}  */
