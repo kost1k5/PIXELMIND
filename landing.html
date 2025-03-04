@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pixelmind: A generative art experiment using AI to inspire artists."
+    />
+    <meta
+      name="keywords"
+      content="generative art, AI art, Pixelmind, art tools"
+    />
+    <meta name="author" content="Pixelmind Team" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="variables.css" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="landing.css" />
+
+    <title>Pixelmind</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <div>
+          <a href="landing.html">
+            <img src="assets/logo.png" alt="Pixelmind Logo" />
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Roadmap</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#" class="discord-btn">
+                <svg
+                  width="27"
+                  height="22"
+                  viewBox="0 0 27 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_8081_1397)">
+                    <path
+                      id="discord-path"
+                      d="M22.9627 2.15604C21.2781 1.32492 19.4769 0.720891 17.5938 0.376953C17.3625 0.817869 17.0923 1.41091 16.906 1.88267C14.9042 1.56522 12.9208 1.56522 10.9558 1.88267C10.7695 1.41091 10.4932 0.817869 10.2599 0.376953C8.3747 0.720891 6.5714 1.32713 4.88683 2.16044C1.48902 7.57477 0.567935 12.8546 1.02848 18.0595C3.28208 19.8341 5.46609 20.9122 7.61325 21.6176C8.14339 20.8482 8.61621 20.0304 9.02353 19.1684C8.24777 18.8576 7.50476 18.474 6.80271 18.0287C6.98896 17.8832 7.17115 17.731 7.34716 17.5745C11.6292 19.6865 16.2817 19.6865 20.5126 17.5745C20.6907 17.731 20.8728 17.8832 21.0571 18.0287C20.3529 18.4762 19.6079 18.8597 18.8321 19.1706C19.2395 20.0304 19.7102 20.8505 20.2424 21.6198C22.3916 20.9144 24.5777 19.8364 26.8313 18.0595C27.3717 12.0257 25.9082 6.79436 22.9627 2.15604ZM9.6069 14.8586C8.32147 14.8586 7.26732 13.5931 7.26732 12.0522C7.26732 10.5112 8.29896 9.2436 9.6069 9.2436C10.9149 9.2436 11.969 10.509 11.9465 12.0522C11.9485 13.5931 10.9149 14.8586 9.6069 14.8586ZM18.2529 14.8586C16.9675 14.8586 15.9133 13.5931 15.9133 12.0522C15.9133 10.5112 16.9449 9.2436 18.2529 9.2436C19.5608 9.2436 20.615 10.509 20.5925 12.0522C20.5925 13.5931 19.5608 14.8586 18.2529 14.8586Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_8081_1397">
+                      <rect
+                        width="26.0417"
+                        height="21.8182"
+                        fill="white"
+                        transform="translate(0.917969 0.0898438)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                Join our Discord
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="welcome">
+        <div class="welcome-left">
+          <h1>What is Pixelmind?</h1>
+          <p>
+            Welcome to Pixelmind, a generative art experiment. Harnessing the
+            magic of artificial intelligence, our generative art tools inspire,
+            fuel and amplify artists.
+          </p>
+          <a href="#" class="btn-primary">Join</a>
+        </div>
+        <div>
+          <img src="assets/ball.png" alt="" />
+        </div>
+        <div class="center-radial-gradient"></div>
+      </section>
+
+      <section class="create-pixelmind">
+        <h2>Create something beautiful right here</h2>
+        <div class="create-pixelmind-main">
+          <div class="create-pixelmind-left">
+            <span class="style">Select Your Style</span>
+            <p>
+              You can select up to three quick styles to influence your
+              creation, or describe it in the text box.
+            </p>
+            <div class="create-pixelmind-select">
+              <div class="select-wrapper">
+                <select class="custom-select">
+                  <option value="" disabled selected hidden>Choose</option>
+                  <option value="Deviantart">Deviantart</option>
+                </select>
+                <span class="arrow"></span>
+              </div>
+
+              <div class="select-wrapper">
+                <select class="custom-select">
+                  <option value="" disabled selected hidden>Choose</option>
+                  <option value="Pixiv">Pixiv</option>
+                </select>
+                <span class="arrow"></span>
+              </div>
+              <div class="select-wrapper">
+                <select class="custom-select">
+                  <option value="" disabled selected hidden>Choose</option>
+                  <option value="Anime">Anime</option>
+                  <option value="Western">Western</option>
+                  <option value="Matrix">Matrix</option>
+                </select>
+                <span class="arrow"></span>
+              </div>
+            </div>
+            <span class="style">Describe your masterpiece</span>
+            <textarea
+              id="myTextarea"
+              placeholder="Your description here"
+            ></textarea>
+          </div>
+          <div class="create-pixelmind-right">
+            <span class="style">Upload your image</span>
+            <p>PNG and JPEG files are allowed</p>
+            <img src="./assets/upload.svg" alt="" />
+            <span class="style"
+              >Drag and Drop <br />
+              or</span
+            >
+            <div class="upload-container">
+              <input type="file" id="file-input" hidden />
+              <label for="file-input" class="upload-button" id="upload-button">
+                browse to choose a file
+              </label>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary">Create</button>
+      </section>
+      <section class="creative-symbiosis">
+        <div class="creative-symbiosis-left" id="mySlider"></div>
+
+        <div class="creative-symbiosis-right">
+          <h1>Blurring the line between collector and artist.</h1>
+          <p>
+            A self-driving car for creativity, Pixelmind allows collectors and
+            creators to collaborate, creating unique one-of-one images and NFTs.
+          </p>
+        </div>
+      </section>
+      <section class="nft">
+        <div class="nft-left">
+          <h1>See art. Live art. Mint art.</h1>
+          <p>
+            Select the series you want to create with, input a prompt, and watch
+            as your piece is created before your very eyes. Once you’ve honed in
+            on your perfect piece or pieces, you can mint them as NFTs - your
+            part of that series.
+          </p>
+        </div>
+        <div class="nft-right">
+          <div class="nft-first-lev">
+            <img src="./assets/eth.png" alt="Ethereum" />
+          </div>
+          <div class="nft-sec-lev">
+            <img src="./assets/crypto1.png" alt="Криптовалюта 1" />
+          </div>
+          <div class="nft-sec-lev">
+            <img src="./assets/crypto2.png" alt="Криптовалюта 2" />
+          </div>
+        </div>
+      </section>
+      <section class="idea-multiplier">
+        <div>
+          <h1>A force multiplier for <br />creative effort</h1>
+          <a href="/" class="btn-primary">Join</a>
+        </div>
+      </section>
+      <section class="creative-impulse">
+        <div>
+          <h1>Get Creative!</h1>
+          <p>See what the community is generating</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="./assets/astronavt.png" alt="astronavt" />
+            <div class="rating">
+              <div class="rating-container">
+                <img
+                  class="rating-up"
+                  src="./assets/arrow-rating-up.svg"
+                  alt="Увеличить рейтинг"
+                />
+                <div class="rating-value">90</div>
+                <img
+                  class="rating-down"
+                  src="./assets/arrow-rating-down.svg"
+                  alt="Уменьшить рейтинг"
+                />
+              </div>
+              <div class="social-actions">
+                <span>
+                  <img src="./assets/comment.svg" alt="Комментарий" />
+                </span>
+                <span class="like-button">
+                  <svg
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      class="mask0_8132_1469"
+                      style="mask-type: luminance"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="21"
+                      height="20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 0H20.4725V19.501H0V0Z"
+                        fill="white"
+                      />
+                    </mask>
+                    <g>
+                      <path
+                        class="like-path"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.82347 9.12312C3.22547 13.4851 8.76447 17.0121 10.2365 17.8851C11.7135 17.0031 17.2925 13.4371 18.6495 9.12712C19.5405 6.34112 18.7135 2.81212 15.4275 1.75312C13.8355 1.24212 11.9785 1.55312 10.6965 2.54512C10.4285 2.75112 10.0565 2.75512 9.78647 2.55112C8.42847 1.53012 6.65447 1.23112 5.03747 1.75312C1.75647 2.81112 0.932468 6.34012 1.82347 9.12312ZM10.2375 19.5011C10.1135 19.5011 9.99047 19.4711 9.87847 19.4101C9.56547 19.2391 2.19247 15.1751 0.395468 9.58112C0.394468 9.58112 0.394468 9.58012 0.394468 9.58012C-0.733532 6.05812 0.522469 1.63212 4.57747 0.325118C6.48147 -0.290882 8.55647 -0.019882 10.2345 1.03912C11.8605 0.0111181 14.0205 -0.272882 15.8865 0.325118C19.9455 1.63412 21.2055 6.05912 20.0785 9.58012C18.3395 15.1101 10.9125 19.2351 10.5975 19.4081C10.4855 19.4701 10.3615 19.5011 10.2375 19.5011Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/color.png" alt="color" />
+            <div class="rating">
+              <div class="rating-container">
+                <img
+                  class="rating-up"
+                  src="./assets/arrow-rating-up.svg"
+                  alt="Увеличить рейтинг"
+                />
+                <div class="rating-value">123</div>
+                <img
+                  class="rating-down"
+                  src="./assets/arrow-rating-down.svg"
+                  alt="Уменьшить рейтинг"
+                />
+              </div>
+              <div class="social-actions">
+                <span>
+                  <img src="./assets/comment.svg" alt="Комментарий" />
+                </span>
+                <span class="like-button">
+                  <svg
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      class="mask0_8132_1469"
+                      style="mask-type: luminance"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="21"
+                      height="20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 0H20.4725V19.501H0V0Z"
+                        fill="white"
+                      />
+                    </mask>
+                    <g>
+                      <path
+                        class="like-path"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.82347 9.12312C3.22547 13.4851 8.76447 17.0121 10.2365 17.8851C11.7135 17.0031 17.2925 13.4371 18.6495 9.12712C19.5405 6.34112 18.7135 2.81212 15.4275 1.75312C13.8355 1.24212 11.9785 1.55312 10.6965 2.54512C10.4285 2.75112 10.0565 2.75512 9.78647 2.55112C8.42847 1.53012 6.65447 1.23112 5.03747 1.75312C1.75647 2.81112 0.932468 6.34012 1.82347 9.12312ZM10.2375 19.5011C10.1135 19.5011 9.99047 19.4711 9.87847 19.4101C9.56547 19.2391 2.19247 15.1751 0.395468 9.58112C0.394468 9.58112 0.394468 9.58012 0.394468 9.58012C-0.733532 6.05812 0.522469 1.63212 4.57747 0.325118C6.48147 -0.290882 8.55647 -0.019882 10.2345 1.03912C11.8605 0.0111181 14.0205 -0.272882 15.8865 0.325118C19.9455 1.63412 21.2055 6.05912 20.0785 9.58012C18.3395 15.1101 10.9125 19.2351 10.5975 19.4081C10.4855 19.4701 10.3615 19.5011 10.2375 19.5011Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/threads.png" alt="threads" />
+            <div class="rating">
+              <div class="rating-container">
+                <img
+                  class="rating-up"
+                  src="./assets/arrow-rating-up.svg"
+                  alt="Увеличить рейтинг"
+                />
+                <div class="rating-value">23</div>
+                <img
+                  class="rating-down"
+                  src="./assets/arrow-rating-down.svg"
+                  alt="Уменьшить рейтинг"
+                />
+              </div>
+              <div class="social-actions">
+                <span>
+                  <img src="./assets/comment.svg" alt="Комментарий" />
+                </span>
+                <span class="like-button">
+                  <svg
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      class="mask0_8132_1469"
+                      style="mask-type: luminance"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="21"
+                      height="20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 0H20.4725V19.501H0V0Z"
+                        fill="white"
+                      />
+                    </mask>
+                    <g>
+                      <path
+                        class="like-path"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.82347 9.12312C3.22547 13.4851 8.76447 17.0121 10.2365 17.8851C11.7135 17.0031 17.2925 13.4371 18.6495 9.12712C19.5405 6.34112 18.7135 2.81212 15.4275 1.75312C13.8355 1.24212 11.9785 1.55312 10.6965 2.54512C10.4285 2.75112 10.0565 2.75512 9.78647 2.55112C8.42847 1.53012 6.65447 1.23112 5.03747 1.75312C1.75647 2.81112 0.932468 6.34012 1.82347 9.12312ZM10.2375 19.5011C10.1135 19.5011 9.99047 19.4711 9.87847 19.4101C9.56547 19.2391 2.19247 15.1751 0.395468 9.58112C0.394468 9.58112 0.394468 9.58012 0.394468 9.58012C-0.733532 6.05812 0.522469 1.63212 4.57747 0.325118C6.48147 -0.290882 8.55647 -0.019882 10.2345 1.03912C11.8605 0.0111181 14.0205 -0.272882 15.8865 0.325118C19.9455 1.63412 21.2055 6.05912 20.0785 9.58012C18.3395 15.1101 10.9125 19.2351 10.5975 19.4081C10.4855 19.4701 10.3615 19.5011 10.2375 19.5011Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/space.png" alt="Skeleton" />
+            <div class="rating">
+              <div class="rating-container">
+                <img
+                  class="rating-up"
+                  src="./assets/arrow-rating-up.svg"
+                  alt="Увеличить рейтинг"
+                />
+                <div class="rating-value">1</div>
+                <img
+                  class="rating-down"
+                  src="./assets/arrow-rating-down.svg"
+                  alt="Уменьшить рейтинг"
+                />
+              </div>
+              <div class="social-actions">
+                <span>
+                  <img src="./assets/comment.svg" alt="Комментарий" />
+                </span>
+                <span class="like-button">
+                  <svg
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      class="mask0_8132_1469"
+                      style="mask-type: luminance"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="21"
+                      height="20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 0H20.4725V19.501H0V0Z"
+                        fill="white"
+                      />
+                    </mask>
+                    <g>
+                      <path
+                        class="like-path"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.82347 9.12312C3.22547 13.4851 8.76447 17.0121 10.2365 17.8851C11.7135 17.0031 17.2925 13.4371 18.6495 9.12712C19.5405 6.34112 18.7135 2.81212 15.4275 1.75312C13.8355 1.24212 11.9785 1.55312 10.6965 2.54512C10.4285 2.75112 10.0565 2.75512 9.78647 2.55112C8.42847 1.53012 6.65447 1.23112 5.03747 1.75312C1.75647 2.81112 0.932468 6.34012 1.82347 9.12312ZM10.2375 19.5011C10.1135 19.5011 9.99047 19.4711 9.87847 19.4101C9.56547 19.2391 2.19247 15.1751 0.395468 9.58112C0.394468 9.58112 0.394468 9.58012 0.394468 9.58012C-0.733532 6.05812 0.522469 1.63212 4.57747 0.325118C6.48147 -0.290882 8.55647 -0.019882 10.2345 1.03912C11.8605 0.0111181 14.0205 -0.272882 15.8865 0.325118C19.9455 1.63412 21.2055 6.05912 20.0785 9.58012C18.3395 15.1101 10.9125 19.2351 10.5975 19.4081C10.4855 19.4701 10.3615 19.5011 10.2375 19.5011Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/tokio_shop.png" alt="Tokio" />
+            <div class="rating">
+              <div class="rating-container">
+                <img
+                  class="rating-up"
+                  src="./assets/arrow-rating-up.svg"
+                  alt="Увеличить рейтинг"
+                />
+                <div class="rating-value">45</div>
+                <img
+                  class="rating-down"
+                  src="./assets/arrow-rating-down.svg"
+                  alt="Уменьшить рейтинг"
+                />
+              </div>
+              <div class="social-actions">
+                <span>
+                  <img src="./assets/comment.svg" alt="Комментарий" />
+                </span>
+                <span class="like-button">
+                  <svg
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      class="mask0_8132_1469"
+                      style="mask-type: luminance"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="21"
+                      height="20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 0H20.4725V19.501H0V0Z"
+                        fill="white"
+                      />
+                    </mask>
+                    <g>
+                      <path
+                        class="like-path"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.82347 9.12312C3.22547 13.4851 8.76447 17.0121 10.2365 17.8851C11.7135 17.0031 17.2925 13.4371 18.6495 9.12712C19.5405 6.34112 18.7135 2.81212 15.4275 1.75312C13.8355 1.24212 11.9785 1.55312 10.6965 2.54512C10.4285 2.75112 10.0565 2.75512 9.78647 2.55112C8.42847 1.53012 6.65447 1.23112 5.03747 1.75312C1.75647 2.81112 0.932468 6.34012 1.82347 9.12312ZM10.2375 19.5011C10.1135 19.5011 9.99047 19.4711 9.87847 19.4101C9.56547 19.2391 2.19247 15.1751 0.395468 9.58112C0.394468 9.58112 0.394468 9.58012 0.394468 9.58012C-0.733532 6.05812 0.522469 1.63212 4.57747 0.325118C6.48147 -0.290882 8.55647 -0.019882 10.2345 1.03912C11.8605 0.0111181 14.0205 -0.272882 15.8865 0.325118C19.9455 1.63412 21.2055 6.05912 20.0785 9.58012C18.3395 15.1101 10.9125 19.2351 10.5975 19.4081C10.4855 19.4701 10.3615 19.5011 10.2375 19.5011Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/skeleton.png" alt="Skeleton" />
+            <div class="rating">
+              <div class="rating-container">
+                <img
+                  class="rating-up"
+                  src="./assets/arrow-rating-up.svg"
+                  alt="Увеличить рейтинг"
+                />
+                <div class="rating-value">64</div>
+                <img
+                  class="rating-down"
+                  src="./assets/arrow-rating-down.svg"
+                  alt="Уменьшить рейтинг"
+                />
+              </div>
+              <div class="social-actions">
+                <span>
+                  <img src="./assets/comment.svg" alt="Комментарий" />
+                </span>
+                <span class="like-button">
+                  <svg
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      class="mask0_8132_1469"
+                      style="mask-type: luminance"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="21"
+                      height="20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 0H20.4725V19.501H0V0Z"
+                        fill="white"
+                      />
+                    </mask>
+                    <g>
+                      <path
+                        class="like-path"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.82347 9.12312C3.22547 13.4851 8.76447 17.0121 10.2365 17.8851C11.7135 17.0031 17.2925 13.4371 18.6495 9.12712C19.5405 6.34112 18.7135 2.81212 15.4275 1.75312C13.8355 1.24212 11.9785 1.55312 10.6965 2.54512C10.4285 2.75112 10.0565 2.75512 9.78647 2.55112C8.42847 1.53012 6.65447 1.23112 5.03747 1.75312C1.75647 2.81112 0.932468 6.34012 1.82347 9.12312ZM10.2375 19.5011C10.1135 19.5011 9.99047 19.4711 9.87847 19.4101C9.56547 19.2391 2.19247 15.1751 0.395468 9.58112C0.394468 9.58112 0.394468 9.58012 0.394468 9.58012C-0.733532 6.05812 0.522469 1.63212 4.57747 0.325118C6.48147 -0.290882 8.55647 -0.019882 10.2345 1.03912C11.8605 0.0111181 14.0205 -0.272882 15.8865 0.325118C19.9455 1.63412 21.2055 6.05912 20.0785 9.58012C18.3395 15.1101 10.9125 19.2351 10.5975 19.4081C10.4855 19.4701 10.3615 19.5011 10.2375 19.5011Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>The Roadmap</h1>
+        <p>Join the journey</p>
+        <h2>Q4 2021</h2>
+      </section>
+    </div>
+    <script src="/script/slider.bundle.js"></script>
+    <script>
+      new SliderBar({
+        el: "#mySlider",
+        beforeImg: "./assets/symbiosis.png",
+        afterImg: "./assets/symbiosis2.png",
+        width: "95%",
+        height: "400px",
+        line: true,
+        lineColor: "var(--color-white)",
+      });
+    </script>
+    <script src="landing.js" defer></script>
+  </body>
+</html>
