@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Обработка селектов
+  // Custom select handling
   const customSelects = document.querySelectorAll('.custom-select');
   customSelects.forEach((select) => {
     const wrapper = select.closest('.select-wrapper');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
- 
+  // File upload handling
   const fileInput = document.getElementById('file-input');
   const uploadButton = document.getElementById('upload-button');
 
@@ -36,45 +36,58 @@ document.addEventListener('DOMContentLoaded', function() {
       uploadButton.textContent = file ? file.name : 'Upload';
     });
   } else {
-    console.error('Элемент "file-input" или "upload-button" не найден.');
+    console.error('Element "file-input" or "upload-button" not found.');
   }
-});
-document.addEventListener('DOMContentLoaded', function() {
+
+  // Rating handling
   const ratingContainers = document.querySelectorAll('.rating-container');
 
   ratingContainers.forEach(container => {
     const ratingUp = container.querySelector('.rating-up');
     const ratingDown = container.querySelector('.rating-down');
     const ratingValue = container.querySelector('.rating-value');
-    let rating = parseInt(ratingValue.textContent);
-    let hasRated = false; // Добавляем флаг
 
-    ratingUp.addEventListener('click', function() {
-      if (!hasRated) {
+    let rating = parseInt(ratingValue.textContent);
+    let isChanged = false;
+
+    ratingUp.addEventListener('click', function(event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      if (!isChanged) {
         rating++;
         ratingValue.textContent = rating;
-        hasRated = true; // Устанавливаем флаг
+        isChanged = true;
       }
     });
 
-    ratingDown.addEventListener('click', function() {
-      if (!hasRated && rating > 0) {
+    ratingDown.addEventListener('click', function(event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      if (!isChanged && rating > 0) {
         rating--;
         ratingValue.textContent = rating;
-        hasRated = true; // Устанавливаем флаг
+        isChanged = true;
       }
     });
   });
-});
-document.addEventListener('DOMContentLoaded', function() {
- 
+
+  // Like button handling
   const likeButtons = document.querySelectorAll('.like-button');
 
-
   likeButtons.forEach(button => {
-    button.addEventListener('click', function() {
-     
+    button.addEventListener('click', function(event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
       button.classList.toggle('liked');
     });
   });
+
+  // Комментарий
+  const commentButtons = document.querySelectorAll('span img[src="./assets/comment.svg"]');
+
+  commentButtons.forEach(button => {
+    button.addEventListener('click', function(event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      // Добавьте сюда обработку клика на комментарий, если нужно
+    });
+  });
 });
+
+  
