@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./reset.css" />
@@ -30,20 +30,25 @@
           <h5>Sign in</h5>
           <p>and get your hands dirty</p>
         </div>
-        <div class="input-container">
-          <img src="./assets/message.svg" alt="Email Icon" />
-          <input id="email" type="email" placeholder="Email" />
-          <!-- <span class="error-message" id="email-error"></span> -->
+        <div>
+          <div class="input-container">
+            <img src="./assets/message.svg" alt="Email Icon" />
+            <input id="email" type="email" placeholder="Email" />
+          </div>
+          <span class="error-message" id="email-error">Incorrect email</span>
         </div>
-        <div class="input-container">
-          <img src="./assets/lock.svg" alt="Password Icon" />
-          <input id="password" type="password" placeholder="Password" />
-          <!-- <span class="error-message" id="password-error"></span> -->
-          <!-- <a href="/" class="forgot-password">Forgot password?</a> -->
+        <div>
+          <div class="input-container">
+            <img src="./assets/lock.svg" alt="Password Icon" />
+            <input id="password" type="password" placeholder="Password" />
+          </div>
+          <span class="error-message" id="password-error"
+            >Incorrect password</span
+          >
+          <span class="forgot-password">Forgot password?</span>
         </div>
-        <a id="login-button" class="btn-primary" href="./landing.html">
-          Log in
-        </a>
+
+        <button id="login-button" class="btn-primary">Log in</button>
         <p>
           Don’t have an account?
           <a href="./sign-up.html" class="registration"> Join our waitlist</a>
@@ -52,6 +57,7 @@
     </div>
 
     <div class="center-radial-gradient"></div>
-    <script src="sign-in.js"></script>
+    <!-- Подключение JavaScript -->
+    <script src="./sign-in.js"></script>
   </body>
 </html>

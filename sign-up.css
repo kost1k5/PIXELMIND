@@ -68,7 +68,7 @@ main {
 h5 {
   color: var(--color-white);
   font-weight: 400;
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 8px;
   text-align: center;
 }
@@ -120,4 +120,74 @@ span {
 }
 .registration {
   color: var(--color-pink);
+}
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  width: 300px;
+  padding: 15px 10px 15px 40px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: aliceblue;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-container input.error {
+  border-color: var(--color-error);
+}
+
+.input-container img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+p a {
+  color: var(--color-pink);
+}
+
+#login-button:disabled {
+  cursor: not-allowed;
+}
+
+#login-button:not(:disabled) {
+  cursor: pointer;
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-message.active {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    width: 100%;
+    padding: 32px;
+  }
+
+  p {
+    font-size: 14px; /* Adjust paragraph font size */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .input-container img {
+    width: 18px; /* Slightly smaller icon size */
+    height: 18px; /* Slightly smaller icon size */
+    left: 8px; /* Adjust position of icons */
+  }
 }

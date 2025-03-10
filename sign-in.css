@@ -93,14 +93,6 @@ p {
   color: var(--color-purple);
 }
 
-.forgot-password {
-  color: var(--color-pink);
-  position: absolute;
-  right: 37%;
-  bottom: 39%;
-  font-size: 14px;
-}
-
 .input-container {
   position: relative;
 }
@@ -114,6 +106,11 @@ p {
   background-color: rgba(0, 0, 0, 0.3);
   color: aliceblue;
   outline: none;
+  box-sizing: border-box;
+}
+
+.input-container input.error {
+  border-color: var(--color-error);
 }
 
 .input-container img {
@@ -125,31 +122,51 @@ p {
   height: 20px;
   pointer-events: none;
 }
+
 p a {
   color: var(--color-pink);
 }
 
-/* .input-container input.error {
-  border-color: red; 
-}
-
-.error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-  display: none; 
-}
-
-.error-message.active {
-  display: block; }s
-
-
 #login-button:disabled {
-  background-color: gray;
   cursor: not-allowed;
 }
 
 #login-button:not(:disabled) {
-  background-color: var(--color-pink);
   cursor: pointer;
-}  */
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-message.active {
+  display: block;
+}
+.forgot-password {
+  display: flex;
+  justify-content: end;
+  color: var(--color-pink);
+  font-size: 14px;
+  padding: 5px;
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    width: 100%;
+    padding: 32px;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .input-container img {
+    width: 18px;
+    height: 18px;
+    left: 8px;
+  }
+}

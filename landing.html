@@ -31,13 +31,18 @@
 
   <body>
     <div class="main-container">
-      <header>
+      <header id="header">
         <div>
           <a href="landing.html">
             <img src="assets/logo.png" alt="Pixelmind Logo" />
           </a>
         </div>
-        <nav>
+        <div class="header-media">
+          <a href="#" class="burger-menu-btn" id="menu-toggle">
+            <img src="./assets/menu.svg" alt="Menu" />
+          </a>
+        </div>
+        <nav id="navbar">
           <ul>
             <li><a href="./community.html">Community</a></li>
             <li><a href="#">Roadmap</a></li>
@@ -72,9 +77,42 @@
                 Join our Discord
               </a>
             </li>
+            <li>
+              <a href="./index.html" class="log-out-btn">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.7698 9.23692V8.07067C18.7698 5.52692 16.7073 3.46442 14.1636 3.46442H8.06984C5.52734 3.46442 3.46484 5.52692 3.46484 8.07067V21.9832C3.46484 24.5269 5.52734 26.5894 8.06984 26.5894H14.1761C16.7123 26.5894 18.7698 24.5332 18.7698 21.9969V20.8182"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M27.2622 15.0268H12.2109"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.6016 11.3829L27.2616 15.0267L23.6016 18.6717"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="media-log-out">Exit</span>
+              </a>
+            </li>
           </ul>
         </nav>
+        <div class="overlay" id="overlay"></div>
       </header>
+
       <section class="welcome">
         <div class="welcome-left">
           <h1>What is Pixelmind?</h1>
@@ -553,6 +591,7 @@
         <div class="footer-main">
           <div class="footer-left">
             <h2>Q4 2021</h2>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <img src="./assets/tshirt.png" alt="" />
@@ -563,6 +602,7 @@
                 </p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <img src="./assets/astronaut-footer.png" alt="" />
@@ -573,19 +613,23 @@
                 </p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <h3>December</h3>
                 <p>Release Pixelmind web app for initial PX Collectors</p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <h2>Q2 2022</h2>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <h3>January</h3>
                 <p>Release Imaginarium Arcade</p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <h3>April–June</h3>
@@ -595,8 +639,9 @@
                 </p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
           </div>
-          <div class="vertical-line"></div>
+          <div class="vertical-line-screen"></div>
           <div class="footer-right">
             <div class="footer-card">
               <div class="footer-card-wrapper">
@@ -604,6 +649,7 @@
                 <p>PX Collector Pass announcement — whitelist begins</p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <img src="./assets/drawing-on-tablet.png" alt="" />
@@ -614,6 +660,7 @@
                 </p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <img src="./assets/purple-smile.png" alt="" />
@@ -631,19 +678,23 @@
                 </p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <h3>December</h3>
                 <p>Launch party for Pixel Basel</p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <h2>Q1 2022</h2>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <h3>January</h3>
                 <p>PX Creator Pass award — onboarding top performing artists</p>
               </div>
             </div>
+            <div class="vertical-line-media"></div>
             <div class="footer-card">
               <div class="footer-card-wrapper">
                 <h3>January–February</h3>

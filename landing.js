@@ -88,6 +88,43 @@ document.addEventListener('DOMContentLoaded', function() {
       // Добавьте сюда обработку клика на комментарий, если нужно
     });
   });
+
+
+
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    var navbar = document.getElementById('navbar');
+    var overlay = document.getElementById('overlay');
+    navbar.classList.toggle('active');
+    overlay.classList.toggle('active');
 });
 
-  
+// Закрытие меню при клике на затемнение
+document.getElementById('overlay').addEventListener('click', function() {
+    var navbar = document.getElementById('navbar');
+    var overlay = document.getElementById('overlay');
+    navbar.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+// Закрытие меню при клике на пункт меню
+document.querySelectorAll('nav ul li a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        var navbar = document.getElementById('navbar');
+        var overlay = document.getElementById('overlay');
+        navbar.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+});
+window.addEventListener('scroll', function() {
+  var header = document.getElementById('header');
+  var scrollPosition = window.scrollY;
+
+  if (scrollPosition > 100) { // Изменяем стили после прокрутки на 100px
+      header.classList.add('scrolled');
+  } else {
+      header.classList.remove('scrolled');
+  }
+});
+
+
+});

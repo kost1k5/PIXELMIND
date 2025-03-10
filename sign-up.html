@@ -30,15 +30,23 @@
           <h5>Sign up</h5>
           <p>Join us and create your own series</p>
         </div>
-        <div class="input-container">
-          <img src="./assets/message.svg" alt="Email Icon" />
-          <input id="email" type="email" placeholder="Email" />
+        <div>
+          <div class="input-container">
+            <img src="./assets/message.svg" alt="Email Icon" />
+            <input id="email" type="email" placeholder="Email" />
+          </div>
+          <span class="error-message" id="email-error">Incorrect email</span>
         </div>
-        <div class="input-container">
-          <img src="./assets/lock.svg" alt="Password Icon" />
-          <input id="password" type="password" placeholder="Password" />
+        <div>
+          <div class="input-container">
+            <img src="./assets/lock.svg" alt="Password Icon" />
+            <input id="password" type="password" placeholder="Password" />
+          </div>
+          <span class="error-message" id="password-error"
+            >Incorrect password</span
+          >
         </div>
-        <a href="/sign-up.html" class="btn-primary">Sign up</a>
+        <button id="login-button" class="btn-primary">Sign Up</button>
         <span
           >Have an account?
           <a href="./sign-in.html" class="registration"> Log In</a></span
@@ -47,5 +55,6 @@
     </div>
 
     <div class="center-radial-gradient"></div>
+    <script src="./sign-up.js"></script>
   </body>
 </html>

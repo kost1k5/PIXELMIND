@@ -51,6 +51,6 @@ loginButton.addEventListener('click', (event) => {
 
   if (validateInputs()) {
     // Если все поля валидны, перенаправляем пользователя на следующую страницу
-    window.location.href = './landing.html'; // Замените на нужный URL
+    window.location.href = './sign-in.html'; // Замените на нужный URL
   }
 });

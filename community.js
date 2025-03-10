@@ -102,4 +102,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }
+
+
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      var navbar = document.getElementById('navbar');
+      var overlay = document.getElementById('overlay');
+      navbar.classList.toggle('active');
+      overlay.classList.toggle('active');
+  });
+
+  document.getElementById('overlay').addEventListener('click', function() {
+      var navbar = document.getElementById('navbar');
+      var overlay = document.getElementById('overlay');
+      navbar.classList.remove('active');
+      overlay.classList.remove('active');
+  });
+
+  document.querySelectorAll('nav ul li a').forEach(function(link) {
+      link.addEventListener('click', function() {
+          var navbar = document.getElementById('navbar');
+          var overlay = document.getElementById('overlay');
+          navbar.classList.remove('active');
+          overlay.classList.remove('active');
+      });
+  });
+
+  window.addEventListener('scroll', function() {
+      var header = document.getElementById('header');
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition > 100) {
+          header.classList.add('scrolled');
+      } else {
+          header.classList.remove('scrolled');
+      }
+  });
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    var navbar = document.getElementById('navbar');
+    var overlay = document.getElementById('overlay');
+    navbar.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+  
   });
