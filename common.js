@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
   function toggleMenu() {
     var navbar = document.getElementById('navbar');
     var overlay = document.getElementById('overlay');
@@ -13,12 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.classList.remove('active');
   }
 
+ 
   function closeMenuOnLinkClick() {
     var navbar = document.getElementById('navbar');
     var overlay = document.getElementById('overlay');
     navbar.classList.remove('active');
     overlay.classList.remove('active');
   }
+
 
   function handleScroll() {
     var header = document.getElementById('header');
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
       header.classList.remove('scrolled');
     }
   }
+
 
   document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
   document.getElementById('overlay').addEventListener('click', closeMenuOnOverlayClick);
