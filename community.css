@@ -327,6 +327,7 @@ nav ul li a {
   z-index: 1250;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .close-button-media {
@@ -340,8 +341,9 @@ nav ul li a {
   font-size: 20px;
   cursor: pointer;
   z-index: 1201;
-  align-self: flex-start;
+  margin-right: auto;
   justify-content: center;
+  align-items: center;
   display: none;
 }
 
@@ -427,6 +429,9 @@ footer {
   }
   .search-container {
     width: 100%;
+  }
+  .card {
+    margin: auto;
   }
   .open-card {
     display: none;
