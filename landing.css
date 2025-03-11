@@ -203,6 +203,7 @@ textarea {
   flex: 550px;
   border-radius: 32px;
   background: rgba(20, 19, 36, 0.3);
+  padding: 32px;
 }
 .upload-button {
   background: linear-gradient(to right, #ba03ff, #476bff);
@@ -213,8 +214,7 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
 }
-.create-pixelmind {
-}
+
 .create-pixelmind .btn-primary {
   margin-top: 40px;
 }
@@ -333,13 +333,6 @@ textarea {
   gap: 10px;
 }
 
-.social-actions span {
-  border: solid white 2px;
-  border-radius: 50%;
-  padding: 6px;
-  display: flex;
-  justify-content: center;
-}
 .like-path {
   fill: white;
 }
@@ -350,7 +343,24 @@ textarea {
 
 .like-button {
   cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid white 2px;
+  border-radius: 50%;
+  padding: 6px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  img {
+    width: 20px !important;
+    height: 20px !important;
+  }
 }
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

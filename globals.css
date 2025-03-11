@@ -109,3 +109,77 @@ footer {
     padding: 32px;
   }
 }
+
+button,
+select,
+option,
+input,
+textarea {
+  font-family: Poppins, sans-serif;
+}
+/* Basic select styling */
+select {
+  /* Reset default appearance */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Box model */
+  padding: 10px 15px;
+  width: 200px;
+  border: 1px solid #444;
+  border-radius: 4px;
+
+  /* Text styling */
+  font-size: 16px;
+  color: #fff;
+  background-color: #2a2a2a;
+
+  /* Cursor */
+  cursor: pointer;
+}
+
+/* Style when select is focused */
+select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+/* Style when select is disabled */
+select:disabled {
+  background-color: #333;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Option styling */
+option {
+  /* Text styling */
+  font-size: 16px;
+  color: #fff;
+  background-color: #2a1f3e;
+
+  /* Padding (some browsers support it) */
+  padding: 5px 10px;
+}
+
+/* Hover effect for options (works in some browsers) */
+option:hover {
+  background-color: #3a3a3a;
+}
+
+/* Additional states */
+select:invalid {
+  color: #999;
+}
+
+/* For better browser compatibility */
+select::-ms-expand {
+  display: none; /* Removes default arrow in IE */
+}
+
+/* Optional: Add transition for smooth changes */
+select {
+  transition: all 0.2s ease-in-out;
+}
