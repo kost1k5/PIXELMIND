@@ -1,57 +1,20 @@
+@import url(./globals.css);
 body {
-  background-color: var(--color-gray-13);
-  background-image: url("./assets/retrowave.png");
+  background-image: url("./assets/components-img/retrowave.png");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
-  font-family: Poppins, sans-serif;
   height: 100vh;
-  margin: 0;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
-  width: 1120px;
-  margin: auto;
   height: 100vh;
-  padding: 24px 0;
-}
-
-.center-radial-gradient {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #c44d9c 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  filter: blur(30px);
-  width: 100vw;
-  height: 80vh;
-  border-radius: 9999px;
-  z-index: -1;
-  opacity: 0.3;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-weight: 600;
   height: 48px;
   width: 100%;
-}
-
-a {
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-a:active {
-  color: var(--color-white);
 }
 
 main {
@@ -68,59 +31,23 @@ main {
 h5 {
   color: var(--color-white);
   font-weight: 400;
-  font-size: 36px;
+  font-size: 48px;
   margin-bottom: 8px;
   text-align: center;
 }
+
 p {
   color: var(--color-white);
 }
 
-.input-container {
-  position: relative;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
 }
 
-.input-container input {
-  width: 300px;
-  padding: 15px 10px 15px 40px;
-  font-size: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: aliceblue;
-  outline: none;
-}
-
-.input-container img {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-}
-
-.btn-primary {
-  color: var(--color-white);
-  padding: 15px 52px;
-  background: var(--gradient-primary);
-  border-radius: 16px;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  width: 300px;
-}
-
-.btn-primary:hover {
-  background: white;
-  color: var(--color-purple);
-}
-span {
-  color: var(--color-white);
-}
-.registration {
-  color: var(--color-pink);
-}
 .input-container {
   position: relative;
 }
@@ -151,16 +78,8 @@ span {
   pointer-events: none;
 }
 
-p a {
-  color: var(--color-pink);
-}
-
-#login-button:disabled {
-  cursor: not-allowed;
-}
-
-#login-button:not(:disabled) {
-  cursor: pointer;
+.btn-primary {
+  margin-top: 10px;
 }
 
 .error-message {
@@ -174,20 +93,27 @@ p a {
   display: block;
 }
 
-@media (max-width: 900px) {
-  .main-container {
-    width: 100%;
-    padding: 32px;
-  }
+.forgot-password {
+  display: flex;
+  justify-content: end;
+  color: var(--color-pink);
+  font-size: 14px;
+  padding: 5px;
+}
 
+.registration {
+  color: var(--color-pink);
+}
+
+@media (max-width: 900px) {
   p {
-    font-size: 14px; /* Adjust paragraph font size */
-    text-align: center; /* Center text for better readability */
+    font-size: 14px;
+    text-align: center;
   }
 
   .input-container img {
-    width: 18px; /* Slightly smaller icon size */
-    height: 18px; /* Slightly smaller icon size */
-    left: 8px; /* Adjust position of icons */
+    width: 18px;
+    height: 18px;
+    left: 8px;
   }
 }

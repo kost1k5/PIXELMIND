@@ -12,52 +12,102 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./variables.css" />
     <link rel="stylesheet" href="./globals.css" />
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/components-img/favicon.png"
+    />
     <link rel="stylesheet" href="./sign-in.css" />
 
-    <title>Pixelmind</title>
+    <title>Pixelmind Sign In</title>
   </head>
   <body>
     <div class="main-container">
       <header>
         <a href="./index.html">
-          <img src="./assets/logo.png" alt="Pixelmind Logo" />
+          <img
+            src="./assets/components-img/logo.png"
+            alt="Pixelmind Logo"
+            title="Pixelmind Logo"
+          />
         </a>
       </header>
 
       <main>
-        <div>
-          <h5>Sign in</h5>
-          <p>and get your hands dirty</p>
-        </div>
-        <div>
-          <div class="input-container">
-            <img src="./assets/message.svg" alt="Email Icon" />
-            <input id="email" type="email" placeholder="Email" />
+        <form id="sign-in-form" title="Sign In">
+          <div>
+            <h5>Sign in</h5>
+            <p>and get your hands dirty</p>
           </div>
-          <span class="error-message" id="email-error">Incorrect email</span>
-        </div>
-        <div>
-          <div class="input-container">
-            <img src="./assets/lock.svg" alt="Password Icon" />
-            <input id="password" type="password" placeholder="Password" />
+          <div>
+            <div class="input-container">
+              <img
+                src="./assets/components-img/message.svg"
+                alt="Email Icon"
+                title="Email Icon"
+              />
+              <input
+                id="email"
+                type="email"
+                placeholder="Email"
+                autocomplete="email"
+                required
+                title="email"
+              />
+            </div>
+            <span class="error-message" id="email-error">Incorrect email</span>
           </div>
-          <span class="error-message" id="password-error"
-            >Incorrect password</span
-          >
-          <span class="forgot-password">Forgot password?</span>
-        </div>
+          <div>
+            <div class="input-container">
+              <img
+                src="./assets/components-img/lock.svg"
+                alt="Password Icon"
+                title="Password icon"
+              />
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                required
+                autocomplete="current-password"
+                title="password"
+              />
+            </div>
+            <span class="error-message" id="password-error"
+              >Incorrect password</span
+            >
+            <a
+              href="./error-404.html"
+              class="forgot-password"
+              title="temporarily unavailable"
+              >Forgot password?</a
+            >
+          </div>
 
-        <button id="login-button" class="btn-primary">Log in</button>
-        <p>
-          Don’t have an account?
-          <a href="./sign-up.html" class="registration"> Join our waitlist</a>
-        </p>
+          <button
+            type="submit"
+            id="login-button"
+            class="btn-primary"
+            title="Log In"
+          >
+            Log in
+          </button>
+          <span class="have-account">
+            Don’t have an account?
+            <a
+              href="./error-404.html"
+              class="registration"
+              title="temporarily unavailable"
+            >
+              Join our waitlist</a
+            >
+          </span>
+        </form>
       </main>
     </div>
 
     <div class="center-radial-gradient"></div>
-    <!-- Подключение JavaScript -->
+    <script src="./form-validation.js"></script>
     <script src="./sign-in.js"></script>
   </body>
 </html>

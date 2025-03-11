@@ -1,130 +1,84 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Custom select handling
-  const customSelects = document.querySelectorAll('.custom-select');
-  customSelects.forEach((select) => {
-    const wrapper = select.closest('.select-wrapper');
-    if (wrapper) {
-      select.addEventListener('click', () => {
-        wrapper.classList.toggle('open');
-        const options = select.options;
-        for (let i = 0; i < options.length; i++) {
-          options[i].style.color = options[i].value === '' 
-            ? 'rgba(255, 255, 255, 0.5)' 
-            : 'var(--color-white)';
-        }
-      });
+  function performSearch(query) {
+    const lowerCaseQuery = query.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card) => {
+      const cardName = card.getAttribute('data-name').toLowerCase();
+      card.style.display = cardName.includes(lowerCaseQuery) ? 'block' : 'none';
+    });
+  }
 
-      select.addEventListener('blur', () => {
-        wrapper.classList.remove('open');
-      });
+  function updateCardInfo(cardName) {
+    const cardData = {
+      "cartoon girl": {
+        title: "Strong redhead cartoon girl with tattoos",
+        image: "./assets/cards-img/cartoon-girl.png",
+        description: "Strong redhead cartoon girl with tattoos"
+      }
+    };
+    const data = cardData[cardName];
+    if (data) {
+      const openCardTitle = document.getElementById('open-card-title');
+      const openCardImage = document.getElementById('open-card-image');
+      if (openCardTitle) openCardTitle.textContent = data.title;
+      else console.error('Element with id "open-card-title" not found.');
+      if (openCardImage) openCardImage.src = data.image;
+      else console.error('Element with id "open-card-image" not found.');
+    }
+  }
 
-      select.addEventListener('change', () => {
-        select.style.color = select.value !== '' 
-          ? 'var(--color-white)' 
-          : 'rgba(255, 255, 255, 0.5)';
-      });
+  function closeCardInfo() {
+    const openCardBlock = document.querySelector('.open-card');
+    const overlay = document.querySelector('.overlay');
+    openCardBlock.style.display = 'none';
+    overlay.style.display = 'none';
+    currentOpenCard = null;
+  }
+
+  function openCardInfo(card) {
+    if (currentOpenCard) closeCardInfo();
+    const cardName = card.getAttribute('data-name');
+    if (cardName) {
+      updateCardInfo(cardName);
+      document.querySelector('.open-card').style.display = 'flex';
+      document.querySelector('.overlay').style.display = 'flex';
+      currentOpenCard = card;
+    }
+  }
+
+  const searchInput = document.getElementById('searchInput');
+  const searchIcon = document.getElementById('searchIcon');
+  const cards = document.querySelectorAll('.card');
+  let currentOpenCard = null;
+
+  searchIcon.addEventListener('click', function() {
+    const query = searchInput.value.trim();
+    performSearch(query);
+  });
+
+  searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      const query = searchInput.value.trim();
+      performSearch(query);
     }
   });
 
-  // File upload handling
-  const fileInput = document.getElementById('file-input');
-  const uploadButton = document.getElementById('upload-button');
-
-  if (fileInput && uploadButton) {
-    fileInput.addEventListener('change', function(event) {
-      const file = event.target.files[0];
-      uploadButton.textContent = file ? file.name : 'Upload';
+  cards.forEach(card => {
+    card.addEventListener('click', function(event) {
+      event.stopPropagation();
+      openCardInfo(card);
     });
-  } else {
-    console.error('Element "file-input" or "upload-button" not found.');
+  });
+
+  const closeButtonDesktop = document.querySelector('.close-button-dekstope');
+  const closeButtonMedia = document.querySelector('.close-button-media');
+  const overlay = document.querySelector('.overlay');
+
+  if (closeButtonDesktop) closeButtonDesktop.addEventListener('click', closeCardInfo);
+  if (closeButtonMedia) closeButtonMedia.addEventListener('click', closeCardInfo);
+  if (overlay) {
+    overlay.addEventListener('click', function(event) {
+      if (event.target === overlay) closeCardInfo();
+    });
   }
-
-  // Rating handling
-  const ratingContainers = document.querySelectorAll('.rating-container');
-
-  ratingContainers.forEach(container => {
-    const ratingUp = container.querySelector('.rating-up');
-    const ratingDown = container.querySelector('.rating-down');
-    const ratingValue = container.querySelector('.rating-value');
-
-    let rating = parseInt(ratingValue.textContent);
-    let isChanged = false;
-
-    ratingUp.addEventListener('click', function(event) {
-      event.stopPropagation(); // Предотвращаем всплытие события
-      if (!isChanged) {
-        rating++;
-        ratingValue.textContent = rating;
-        isChanged = true;
-      }
-    });
-
-    ratingDown.addEventListener('click', function(event) {
-      event.stopPropagation(); // Предотвращаем всплытие события
-      if (!isChanged && rating > 0) {
-        rating--;
-        ratingValue.textContent = rating;
-        isChanged = true;
-      }
-    });
-  });
-
-  // Like button handling
-  const likeButtons = document.querySelectorAll('.like-button');
-
-  likeButtons.forEach(button => {
-    button.addEventListener('click', function(event) {
-      event.stopPropagation(); // Предотвращаем всплытие события
-      button.classList.toggle('liked');
-    });
-  });
-
-  // Комментарий
-  const commentButtons = document.querySelectorAll('span img[src="./assets/comment.svg"]');
-
-  commentButtons.forEach(button => {
-    button.addEventListener('click', function(event) {
-      event.stopPropagation(); // Предотвращаем всплытие события
-      // Добавьте сюда обработку клика на комментарий, если нужно
-    });
-  });
-
-
-
-  document.getElementById('menu-toggle').addEventListener('click', function() {
-    var navbar = document.getElementById('navbar');
-    var overlay = document.getElementById('overlay');
-    navbar.classList.toggle('active');
-    overlay.classList.toggle('active');
-});
-
-// Закрытие меню при клике на затемнение
-document.getElementById('overlay').addEventListener('click', function() {
-    var navbar = document.getElementById('navbar');
-    var overlay = document.getElementById('overlay');
-    navbar.classList.remove('active');
-    overlay.classList.remove('active');
-});
-
-// Закрытие меню при клике на пункт меню
-document.querySelectorAll('nav ul li a').forEach(function(link) {
-    link.addEventListener('click', function() {
-        var navbar = document.getElementById('navbar');
-        var overlay = document.getElementById('overlay');
-        navbar.classList.remove('active');
-        overlay.classList.remove('active');
-    });
-});
-window.addEventListener('scroll', function() {
-  var header = document.getElementById('header');
-  var scrollPosition = window.scrollY;
-
-  if (scrollPosition > 100) { // Изменяем стили после прокрутки на 100px
-      header.classList.add('scrolled');
-  } else {
-      header.classList.remove('scrolled');
-  }
-});
-
-
 });

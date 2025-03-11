@@ -12,28 +12,49 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./variables.css" />
     <link rel="stylesheet" href="./globals.css" />
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/components-img/favicon.png"
+    />
     <link rel="stylesheet" href="./index.css" />
-    <title>Pixelmind</title>
+    <title>Pixelmind Home</title>
   </head>
   <body>
     <div class="main-container">
       <header>
         <a href="./index.html">
-          <img src="./assets/logo.png" alt="Pixelmind Logo" />
+          <img
+            src="./assets/components-img/logo.png"
+            alt="Pixelmind Logo"
+            title="PixelMind Logo"
+          />
         </a>
-        <a href="./sign-up.html" class="sign-in">Sign up</a>
+        <a href="./sign-up.html" class="sign-in" title="sing up">Sign up</a>
       </header>
 
       <main>
-        <img src="./assets/big-logo-2.png" alt="Pixelmind Logo" />
+        <img
+          src="./assets/components-img/big-logo.png"
+          alt="Pixelmind Logo"
+          title="Pixelmind logo"
+        />
         <h1>A generative art experiment</h1>
-        <a href="/sign-in.html" class="btn-primary">Enter the mind mines</a>
+        <a href="/sign-in.html" class="btn-primary" title="sing in"
+          >Enter the mind mines</a
+        >
       </main>
 
       <footer>
-        <a href="/">Partners & Artists</a>
-        <a href="/">Join our Discord</a>
+        <a href="./error-404.html" title="temporarily unavailable"
+          >Partners & Artists</a
+        >
+        <a
+          href="https://discord.gg/T3jwjBHzfq"
+          target="_blank"
+          title="go to discord channel"
+          >Join our Discord</a
+        >
       </footer>
     </div>
 
@@ -41,9 +62,8 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         if (window.innerWidth <= 599) {
-          // Сообщение перед перенаправлением (опционально)
           console.log("Redirecting to mobile page...");
-          // Перенаправление
+
           window.location.href = "./sign-in.html";
         }
       });

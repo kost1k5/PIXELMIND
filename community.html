@@ -23,32 +23,49 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="variables.css" />
     <link rel="stylesheet" href="globals.css" />
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/components-img/favicon.png"
+    />
     <link rel="stylesheet" href="community.css" />
 
-    <title>Pixelmind_Community</title>
+    <title>Pixelmind Community</title>
   </head>
 
   <body>
     <div class="main-container">
       <header id="header">
         <div>
-          <a href="landing.html">
-            <img src="assets/logo.png" alt="Pixelmind Logo" />
+          <a href="landing.html" title="refresh page">
+            <img
+              src="assets/components-img/logo.png"
+              alt="Pixelmind Logo"
+              title="PixelMind Logo"
+            />
           </a>
         </div>
         <div class="header-media">
           <a href="#" class="burger-menu-btn" id="menu-toggle">
-            <img src="./assets/menu.svg" alt="Menu" />
+            <img
+              src="./assets/components-img/menu.svg"
+              alt="Menu"
+              title="Menu"
+            />
           </a>
         </div>
         <nav id="navbar">
           <ul>
             <li><a href="./community.html">Community</a></li>
-            <li><a href="#">Roadmap</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="./error-404.html">Roadmap</a></li>
+            <li><a href="./error-404.html">About</a></li>
             <li>
-              <a href="#" class="discord-btn">
+              <a
+                href="https://discord.gg/T3jwjBHzfq"
+                target="_blank"
+                class="discord-btn"
+                title="go to Discord Channel"
+              >
                 <svg
                   width="27"
                   height="22"
@@ -78,7 +95,7 @@
               </a>
             </li>
             <li>
-              <a href="./index.html" class="log-out-btn">
+              <a href="./index.html" class="log-out-btn" title="Log Out">
                 <svg
                   width="30"
                   height="30"
@@ -105,14 +122,14 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span class="media-log-out">Exit</span>
+                <span class="media-log-out" title="Log Out">Log Out</span>
               </a>
             </li>
           </ul>
         </nav>
-        <div class="overlay" id="overlay"></div>
+        <div class="overlay1" id="overlay"></div>
       </header>
-      <section class="site-search">
+      <div class="site-search">
         <div class="create-pixelmind-select">
           <div class="select-wrapper">
             <select class="custom-select">
@@ -149,48 +166,53 @@
             <span class="arrow"></span>
           </div>
         </div>
-        <div class="search-container">
+        <div class="search-container" title="site search">
           <input
             type="text"
             placeholder="Search"
             class="search-input"
             id="searchInput"
+            title="site search"
           />
           <img
-            src="./assets/search.svg"
-            alt="Поиск"
+            src="./assets/components-img/search.svg"
+            alt="search"
             class="search-icon"
             id="searchIcon"
+            title="site search"
           />
         </div>
-      </section>
+      </div>
       <div class="horizont-line"></div>
       <div class="cards">
-        <div class="card" data-name="cartoon girl">
+        <div class="card" data-name="cartoon girl" title="Cartoon Girl">
           <img
             class="card-img"
-            src="./assets/cartoon-girl.png"
+            src="./assets/cards-img/cartoon-girl.png"
             alt="Strong redhead cartoon girl with tattoos"
+            title="Strong redhead cartoon girl with tattoos"
           />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="Increase Rating"
               />
-              <div class="rating-value">21000</div>
+              <div class="rating-value" title="rating">21000</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="Reduce Rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="Comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -199,7 +221,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -229,26 +251,32 @@
           </div>
         </div>
         <div class="card" data-name="astronavt">
-          <img src="./assets/astronavt.png" alt="astronavt" />
+          <img
+            src="./assets/cards-img/castle_astronaut.png"
+            alt="castle astronaut"
+            title="castle astronaut"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="Increase rating"
               />
-              <div class="rating-value">90</div>
+              <div class="rating-value" title="Rating">90</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="reduce rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="Comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -257,7 +285,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -286,27 +314,33 @@
             </div>
           </div>
         </div>
-        <div class="card" data-name="color">
-          <img src="./assets/color.png" alt="color" />
+        <div class="card" data-name="paper sunset">
+          <img
+            src="./assets/cards-img/paper-sunset.png"
+            alt="paper sunset"
+            title="paper-sunset"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="increase rating"
               />
               <div class="rating-value">123</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="reduce rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="Comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -315,7 +349,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -344,27 +378,33 @@
             </div>
           </div>
         </div>
-        <div class="card" data-name="threads">
-          <img src="./assets/threads.png" alt="threads" />
+        <div class="card" data-name="rainbow-threads">
+          <img
+            src="./assets/cards-img/rainbow-threads.png"
+            alt="rainbow threads"
+            title="rainbow threads"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="increase rating"
               />
-              <div class="rating-value">23</div>
+              <div class="rating-value" title="rating">23</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="reduce rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="like">
                 <svg
                   width="21"
                   height="20"
@@ -373,7 +413,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -402,27 +442,33 @@
             </div>
           </div>
         </div>
-        <div class="card" data-name="space">
-          <img src="./assets/space.png" alt="space" />
+        <div class="card" data-name="milky way">
+          <img
+            src="./assets/cards-img/milky-way.png"
+            alt="Milky Way"
+            title="Milky Way"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="Increase rating"
               />
-              <div class="rating-value">1</div>
+              <div class="rating-value" title="Rating">1</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="reduce rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="Comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -431,7 +477,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -460,27 +506,33 @@
             </div>
           </div>
         </div>
-        <div class="card" data-name="tokio">
-          <img src="./assets/tokio_shop.png" alt="Tokio" />
+        <div class="card" data-name="Tokio Shop">
+          <img
+            src="./assets/cards-img/tokio_shop.png"
+            alt="Tokio Shop"
+            title="Tokio Shop"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="Increase  rating"
               />
-              <div class="rating-value">45</div>
+              <div class="rating-value" title="rating">45</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="reduce rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="Comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -489,7 +541,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -518,27 +570,33 @@
             </div>
           </div>
         </div>
-        <div class="card">
-          <img src="./assets/skeleton.png" alt="Skeleton" />
+        <div class="card" data-name="Sea skull">
+          <img
+            src="./assets/cards-img/sea-skull.png"
+            alt="Sea skull"
+            title="sea skull"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="Increase rating"
               />
-              <div class="rating-value">64</div>
+              <div class="rating-value" title="rating">64</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="reduce rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="Comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -547,7 +605,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -576,27 +634,33 @@
             </div>
           </div>
         </div>
-        <div class="card" data-name="flowers">
-          <img src="./assets/flowers.png" alt="flowers" />
+        <div class="card" data-name="colored-smoke">
+          <img
+            src="./assets/cards-img/colored-smoke.png"
+            alt="colored-smoke"
+            title="Colored Smoke"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="Increase rating"
               />
-              <div class="rating-value">1024</div>
+              <div class="rating-value" title="rating">1024</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="reduce rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -605,7 +669,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -634,27 +698,33 @@
             </div>
           </div>
         </div>
-        <div class="card" data-name="mountains">
-          <img src="./assets/mountains.png" alt="mountains" />
+        <div class="card" data-name="Rock House">
+          <img
+            src="./assets/cards-img/rock-house.png"
+            alt="Rock House"
+            title="Rock House"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="Increase rating"
               />
-              <div class="rating-value">673</div>
+              <div class="rating-value" title="rating">673</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="Reduce rating"
               />
             </div>
             <div class="social-actions">
-              <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+              <span title="Comment">
+                <img src="./assets/components-img/comment.svg" alt="comment" />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -663,7 +733,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -692,27 +762,37 @@
             </div>
           </div>
         </div>
-        <div class="card" data-name="winter">
-          <img src="./assets/winter.png" alt="winter" />
+        <div class="card" data-name="Winter Biome">
+          <img
+            src="./assets/cards-img/winter-biome.png"
+            alt="winter biome"
+            title="Winter Biome"
+          />
           <div class="rating">
             <div class="rating-container">
               <img
                 class="rating-up"
-                src="./assets/arrow-rating-up.svg"
-                alt="Увеличить рейтинг"
+                src="./assets/components-img/arrow-rating-up.svg"
+                alt="Increase rating"
+                title="Increase rating"
               />
-              <div class="rating-value">16</div>
+              <div class="rating-value" title="Rating">16</div>
               <img
                 class="rating-down"
-                src="./assets/arrow-rating-down.svg"
-                alt="Уменьшить рейтинг"
+                src="./assets/components-img/arrow-rating-down.svg"
+                alt="reduce rating"
+                title="reduce rating"
               />
             </div>
             <div class="social-actions">
               <span>
-                <img src="./assets/comment.svg" alt="Комментарий" />
+                <img
+                  src="./assets/components-img/comment.svg"
+                  alt="comment"
+                  title="Comment"
+                />
               </span>
-              <span class="like-button">
+              <span class="like-button" title="Like">
                 <svg
                   width="21"
                   height="20"
@@ -721,7 +801,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <mask
-                    id="mask0_8132_271"
+                    class="mask0_8132_271"
                     style="mask-type: luminance"
                     maskUnits="userSpaceOnUse"
                     x="0"
@@ -752,13 +832,19 @@
         </div>
       </div>
 
-      <a href="/community.html" class="load-more-button">Load more</a>
+      <a
+        href="./error-404.html"
+        class="load-more-button"
+        title="unavailable Page"
+        >Load more</a
+      >
 
       <div class="open-card">
-        <button class="close-button">X</button>
+        <button class="close-button-dekstope" title="Close Card">X</button>
+
         <div class="card-info">
           <h2>Strong redhead cartoon girl with tattoos</h2>
-          <span class="card-series">Series #12 &#149; 20 Sep 2021</span>
+          <span class="card-series">Series #12 &bull; 20 Sep 2021</span>
           <div>
             <span class="card-neon card-color">#Neon</span>
             <span class="card-waveblue card-color">#Waveblue</span>
@@ -799,12 +885,23 @@
             </div>
           </div>
         </div>
-        <img src="./assets/cartoon-girl.png" alt="Cartoon Girl" />
+
+        <img
+          src="./assets/cards-img/cartoon-girl.png"
+          alt="Cartoon Girl"
+          id="open-card-image"
+          title="Strong redhead cartoon girl with tattoos"
+        />
+        <button class="close-button-media">
+          <img src="./assets/components-img/back.svg" alt="Back" title="Back" />
+          Back
+        </button>
       </div>
     </div>
 
     <footer></footer>
     <div class="overlay" style="display: none"></div>
+    <script src="common.js"></script>
     <script src="landing.js"></script>
     <script src="community.js"></script>
   </body>

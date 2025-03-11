@@ -1,57 +1,21 @@
+@import url("./globals.css");
+
 body {
-  background-color: var(--color-gray-13);
-  background-image: url("./assets/retrowave.png");
+  background-image: url("./assets/components-img/retrowave.png");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
-  font-family: Poppins, sans-serif;
   height: 100vh;
-  margin: 0;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
-  width: 1120px;
-  margin: auto;
   height: 100vh;
-  padding: 24px 0;
-}
-
-.center-radial-gradient {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #c44d9c 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  filter: blur(30px);
-  width: 100vw;
-  height: 80vh;
-  border-radius: 9999px;
-  z-index: -1;
-  opacity: 0.3;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-weight: 600;
   height: 48px;
   width: 100%;
-}
-
-a {
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-a:active {
-  color: var(--color-white);
 }
 
 .sign-in {
@@ -59,27 +23,10 @@ a:active {
   padding: 15px 52px;
   background: var(--gradient-primary);
   border-radius: 16px;
-  text-decoration: none;
   display: inline-block;
 }
 
 .sign-in:hover {
-  background: white;
-  color: var(--color-purple);
-}
-
-.btn-primary {
-  width: 300px;
-  color: var(--color-white);
-  padding: 15px 52px;
-  background: var(--gradient-primary);
-  border-radius: 16px;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-}
-
-.btn-primary:hover {
   background: white;
   color: var(--color-purple);
 }
@@ -105,4 +52,7 @@ h1 {
 footer {
   display: flex;
   gap: 24px;
+}
+footer a {
+  color: var(--color-white);
 }
