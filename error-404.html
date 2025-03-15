@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eror 404</title>
+    <title>Error 404</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Roboto+Mono:wght@400;700&display=swap"
       rel="stylesheet"
@@ -22,7 +22,7 @@
       }
 
       body {
-        background: #0d0b1e;
+        background: #1a0b2e;
         font-family: "Roboto Mono", monospace;
         color: #fff;
         overflow: hidden;
@@ -41,10 +41,10 @@
       .main-container {
         position: relative;
         z-index: 2;
-        background: rgba(20, 20, 40, 0.85);
+        background: rgba(40, 20, 60, 0.85);
         padding: 60px;
         border-radius: 20px;
-        box-shadow: 0 0 50px rgba(0, 255, 153, 0.2);
+        box-shadow: 0 0 50px rgba(147, 112, 219, 0.2);
         backdrop-filter: blur(10px);
         animation: emerge 2s ease-out;
       }
@@ -70,8 +70,8 @@
         font-size: 140px;
         font-family: "Orbitron", sans-serif;
         font-weight: 900;
-        color: var();
-        text-shadow: 0 0 15px #00ff99, 0 0 30px #00c6ff;
+        color: #9370db;
+        text-shadow: 0 0 15px #ba55d3, 0 0 30px #dda0dd;
         position: relative;
         animation: glitch 1.5s infinite alternate, drop 1s ease-out forwards;
       }
@@ -116,8 +116,8 @@
       .message {
         font-size: 36px;
         font-family: "Orbitron", sans-serif;
-        color: #00c6ff;
-        text-shadow: 0 0 20px rgba(0, 198, 255, 0.7);
+        color: #ba55d3;
+        text-shadow: 0 0 20px rgba(186, 85, 211, 0.7);
         margin-bottom: 15px;
         animation: fadeIn 2s ease-in 1s forwards;
         opacity: 0;
@@ -125,7 +125,7 @@
 
       .description {
         font-size: 18px;
-        color: #b0b0b0;
+        color: #d8bfd8;
         max-width: 400px;
         margin: 0 auto 30px;
         animation: fadeIn 2s ease-in 1.5s forwards;
@@ -146,19 +146,19 @@
 
       .btn {
         padding: 15px 30px;
-        background: linear-gradient(135deg, #00ff99, #00c6ff);
-        color: #0d0b1e;
+        background: linear-gradient(135deg, #9370db, #ba55d3);
+        color: #1a0b2e;
         text-decoration: none;
         font-weight: 700;
         border-radius: 30px;
-        box-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+        box-shadow: 0 0 20px rgba(186, 85, 211, 0.5);
         transition: all 0.3s ease;
       }
 
       .btn:hover {
         transform: scale(1.1) translateY(-5px);
-        box-shadow: 0 0 30px rgba(0, 198, 255, 0.8);
-        background: linear-gradient(135deg, #00c6ff, #00ff99);
+        box-shadow: 0 0 30px rgba(147, 112, 219, 0.8);
+        background: linear-gradient(135deg, #ba55d3, #9370db);
       }
 
       #matrix-canvas {
@@ -222,7 +222,7 @@
         height: 100%;
         background: linear-gradient(
           to bottom,
-          rgba(0, 255, 153, 0.1),
+          rgba(186, 85, 211, 0.1),
           rgba(0, 0, 0, 0)
         );
         z-index: 2;
@@ -282,7 +282,7 @@
           </p>
           <div class="action-links">
             <a href="./landing.html" class="btn">Home</a>
-            <a href="./sign-in.html" class="btn">Sing In</a>
+            <a href="./sign-in.html" class="btn">Sign In</a>
           </div>
         </div>
       </div>
@@ -301,10 +301,10 @@
       const drops = Array(Math.floor(columns)).fill(1);
 
       function draw() {
-        ctx.fillStyle = "rgba(13, 11, 30, 0.1)";
+        ctx.fillStyle = "rgba(26, 11, 46, 0.1)";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = "#00ff99";
+        ctx.fillStyle = "#dda0dd";
         ctx.font = `${fontSize}px "Roboto Mono"`;
 
         for (let i = 0; i < drops.length; i++) {
