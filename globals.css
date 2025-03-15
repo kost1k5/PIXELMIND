@@ -102,7 +102,9 @@ footer {
 .overlay.active {
   display: block;
 }
-
+a {
+  cursor: pointer;
+}
 @media (max-width: 900px) {
   .main-container {
     width: 100%;
